@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
-    BrowserRouter,
     Routes,
-    Route,
+    Route, BrowserRouter, useNavigate,
 } from "react-router-dom";
 import Profile from "./components/Profile";
 import LogIn from "./components/LogIn";
@@ -14,18 +13,19 @@ import NotFound from "./components/NotFound";
 import Home from "./components/Home";
 
 function App() {
+
     return (
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route index element={<Home/>}/>
-                    <Route path="profile" element={<Profile/>}/>
-                    <Route path="login" element={<LogIn/>}/>
-                    <Route path="sign-in" element={<SignIn/>}/>
-                    <Route path="restore-password" element={<RestorePassword/>}/>
-                    <Route path="new-password" element={<NewPassword/>}/>
-                    <Route path="test-page" element={<TestPage/>}/>
-                    <Route path="*" element={<NotFound/>}/>
+                    <Route path='friday/' element={<Home/>}/>
+                    <Route path="friday/profile" element={<Profile/>}/>
+                    <Route path="friday/login" element={<LogIn/>}/>
+                    <Route path="friday/sign-in" element={<SignIn/>}/>
+                    <Route path="friday/restore-password" element={<RestorePassword/>}/>
+                    <Route path="friday/new-password" element={<NewPassword/>}/>
+                    <Route path="friday/test-page" element={<TestPage/>}/>
+                    <Route path="friday/*" element={<NotFound/>}/>
                 </Routes>
             </BrowserRouter>
         </div>
