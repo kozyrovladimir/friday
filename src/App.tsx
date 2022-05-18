@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {
     Routes,
     Route, BrowserRouter, useNavigate,
@@ -11,22 +11,13 @@ import NewPassword from "./components/NewPassword";
 import TestPage from "./components/TestPage";
 import NotFound from "./components/NotFound";
 import Home from "./components/Home";
+import Navigation from "./components/Navigation";
 
 function App() {
-
     return (
-        <div className="App">
-            <div>
-                <button>Home</button>
-                <button>Profile</button>
-                <button>Login</button>
-                <button>Sign In</button>
-                <button>Restore Password</button>
-                <button>New Password</button>
-                <button>Test Page</button>
-                <button>Not Found</button>
-            </div>
-            <BrowserRouter>
+        <BrowserRouter>
+            <div className="App">
+                <Navigation/>
                 <Routes>
                     <Route path='friday/' element={<Home/>}/>
                     <Route path="friday/profile" element={<Profile/>}/>
@@ -37,8 +28,8 @@ function App() {
                     <Route path="friday/test-page" element={<TestPage/>}/>
                     <Route path="friday/*" element={<NotFound/>}/>
                 </Routes>
-            </BrowserRouter>
-        </div>
+            </div>
+        </BrowserRouter>
     );
 }
 
