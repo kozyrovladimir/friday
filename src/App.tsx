@@ -16,6 +16,16 @@ function App() {
 
     return (
         <div className="App">
+            <div>
+                <button>Home</button>
+                <button>Profile</button>
+                <button>Login</button>
+                <button>Sign In</button>
+                <button>Restore Password</button>
+                <button>New Password</button>
+                <button>Test Page</button>
+                <button>Not Found</button>
+            </div>
             <BrowserRouter>
                 <Routes>
                     <Route path='friday/' element={<Home/>}/>
